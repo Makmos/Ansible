@@ -1,0 +1,12 @@
+---
+- hosts: app
+  gather_facts: yes
+  become: yes
+  roles:
+    - install-docker-role
+
+- hosts: database
+  gather_facts: yes
+  become: yes
+  roles:
+    - install-postgres
